@@ -1,0 +1,21 @@
+#LN{
+  background: #DCDCDD;
+}
+
+   .owl-prev {
+       left: -30px;
+   }
+   .owl-next {
+         right: -30px;
+     }
+   .owl-prev, .owl-next{
+     postion: absolute;
+     top: 30%;
+   }
+   .owl-prev span, .owl-next span {
+     font-size: 60px;
+     color: #787878;
+   }
+   .owl-theme .owl-nav [class*="owl-"]:hover{
+     background-color: transparent;
+   }

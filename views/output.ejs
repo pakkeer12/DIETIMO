@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIETIMO</title>
+  <link rel="icon" href="data:,">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="icon" href="images/favicon.png" sizes="16x16">
+
+  <link rel="stylesheet" href="assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="
+      padding-right: 60px;
+      padding-left: 60px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background: #000;
+  ">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="Logo" style="
+      width: 200px;
+
+  ">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/computedietchart">Compute Diet Chart</a>
+          <a class="nav-item nav-link" href="/getdietplan">Get Diet Plan</a>
+          <a class="nav-item nav-link active" href="">Diet Plan<span class="sr-only">(current)</span></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <section id="BF">
+    <div class="container " style="margin-top:110px;padding:20px;">
+      <h1 style="text-align:center;">BREAKFAST</h1>
+
+
+      <div class="owl-carousel owl-theme">
+      <% for(var i = 0; i<breakfast.length; i++){ %>
+
+        <div class="item">
+          <div class="card " style="width: 15rem; height: 31rem;">
+            <img class="card-img-top owl-lazy" data-src= <%= breakfast[i].image  %> alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= breakfast[i].title  %></h5>
+              <p class="card-text">Calories - <%= breakfast[i].calories  %>cal</p>
+              <p class="card-text">Protien - <%= breakfast[i].protein  %></p>
+              <p class="card-text">Fat - <%= breakfast[i].fat  %></p>
+              <p class="card-text">Carbohydrates - <%= breakfast[i].carbs  %></p>
+              <form action="/output" method="post">
+                  <button class="btn btn-primary" name="know" type="submit" value= <%= breakfast[i].id %> >Know more </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      <% } %>
+
+      </div>
+    </div>
+  </section>
+  <section id="LN">
+    <div class="container " style="padding:20px;">
+      <h1 style="text-align:center;">LUNCH</h1>
+
+
+      <div class="owl-carousel owl-theme">
+      <% for(var i = 0; i<lunch.length; i++){ %>
+
+        <div class="item">
+          <div class="card" style="width: 15rem; height: 31rem;">
+            <img class="card-img-top owl-lazy" data-src= <%= lunch[i].image  %> alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= lunch[i].title  %></h5>
+              <p class="card-text">Calories - <%= lunch[i].calories  %>cal</p>
+              <p class="card-text">Protien - <%= lunch[i].protein  %></p>
+              <p class="card-text">Fat - <%= lunch[i].fat  %></p>
+              <p class="card-text">Carbohydrates - <%= lunch[i].carbs  %></p>
+              <form action="/output" method="post">
+                  <button class="btn btn-primary" name="know" type="submit" value= <%= lunch[i].id %> >Know more </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      <% } %>
+
+      </div>
+    </div>
+  </section>
+  <section id="DN">
+    <div class="container " style="padding:20px;">
+      <h1 style="text-align:center;">DINNER</h1>
+
+
+      <div class="owl-carousel owl-theme">
+      <% for(var i = 0; i<dinner.length; i++){ %>
+
+        <div class="item">
+          <div class="card" style="width: 15rem; height: 31rem;">
+            <img class="card-img-top owl-lazy" data-src= <%= dinner[i].image  %> alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= dinner[i].title  %></h5>
+              <p class="card-text">Calories - <%= dinner[i].calories  %>cal</p>
+              <p class="card-text">Protien - <%= dinner[i].protein  %></p>
+              <p class="card-text">Fat - <%= dinner[i].fat  %></p>
+              <p class="card-text">Carbohydrates - <%= dinner[i].carbs  %></p>
+              <form action="/output" method="post">
+                  <button class="btn btn-primary" name="know" type="submit" value= <%= dinner[i].id %> >Know more </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      <% } %>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="page-footer font-small">
+  <div class="footer-copyright text-center py-3" style="background:#262626; color:#FFFFFF;">© 2020 Copyright: Team Demogorgons
+  </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="assets/owl.carousel.min.js"></script>
+  <script src="assests/jquery.mousewheel.min.js"></script>
+
+  <script>
+    $('.owl-carousel').owlCarousel({
+      autoplay: true,
+      autoplayHoverPause: true,
+      lazyLoad: true,
+      dots: true,
+      responsive: {
+        0: {
+          items: 1,
+
+        },
+        485: {
+          items: 1,
+
+        },
+        728: {
+          items: 2,
+        },
+        960: {
+          items: 2,
+        },
+        1200: {
+          items: 4,
+        },
+      }
+    });
+  //   $('.owl-carousel').on('mousewheel', '.owl-stage', function(e) {
+  //     if (e.deltaY > 0) {
+  //       $('.owl-carousel').trigger('next.owl');
+  //     } else {
+  //       $('.owl-carousel').trigger('prev.owl');
+  //     }
+  //     e.preventDefault();
+  //   });
+  // </script>
+
+</body>
+
+</html>

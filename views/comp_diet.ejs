@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+</head>
+
+<head>
+  <title>DIETIMO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Font special for pages-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" sizes="16x16">
+  <!-- Free fonts available through ggogleapis is used here -->
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700&amp;display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- MAIN CSS file -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/comp_diet.css">
+
+
+</head>
+
+<body>
+
+
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-black" style="
+      padding-right: 60px;
+      padding-left: 60px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+  ">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="Logo" style="
+      width: 200px;
+
+  ">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link active" href="/computedietchart">Compute Diet Chart<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="/getdietplan">Get Diet Plan</a>
+          <a class="nav-item nav-link" href="/getdietplan">Diet Plan</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+    <div class="register-photo" style="
+    margin-top: 110px;
+    background: #DCDCDD;">
+      <div class="form-container">
+        <div class="image-holder"></div>
+        <form method="post">
+          <h2 class="text-center"><strong>Compute Diet Chart</strong></h2>
+          <div class="form-group"><input class="form-control" type="number" name="HEIGHT" placeholder="HEIGHT(in cm)" min="60" max="300" required=""></div>
+          <div class="form-group"><input class="form-control" type="number" name="WEIGHT" placeholder="WEIGHT(in kg)" required="" min="23" max="227"></div>
+          <div class="form-group"><input class="form-control" type="number" name="AGE" min="15" max="120" placeholder="AGE" required=""></div>
+          <div class="form-group"><select class="custom-select" required="" name="SEX">
+              <option value="" selected="">Choose Gender</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+            </select></div>
+          <div class="form-group"><select class="custom-select" required="" name="ActivityFactor">
+              <option value="" selected="">Choose Activity Factor</option>
+              <option value="1.3">Very Light-(Typical office job. Example: sitting, studying, little walking throughout the day)  </option>
+              <option value="1.55">Light-(Any job where you mostly stand or walk. Example : teaching, shop/lab work, some walking throughout the day)  </option>
+              <option value="1.65">Moderate-(Jobs requiring physical activity Example: landscaping, cleaning, maintenance, jogging/biking/working out 2 hours/day)  </option>
+              <option value="1.8">Heavy-(Heavy manual labor Example: construction, dancer, athlete, hard physical activity min. 4 hours/day)  </option>
+              <option value="2.0">Very Heavy-(Moderate to hard physical activity min. 8 hours/day)</option>
+            </select></div>
+            <div class="form-group"><select class="custom-select" required="" name="diet">
+                <option value="" selected="">Choose Type of Diet</option>
+                <option value="0">Balanced Diet</option>
+                <option value="1">Low Fat Diet</option>
+                <option value="2">Low Carbs Diet</option>
+              </select></div>
+          <div class="form-group"><button class="btn btn-secondary btn-block" type="submit">Get Diet Chart</button></div>
+        </form>
+      </div>
+    </div>
+
+  <footer class="page-footer font-small">
+  <div class="footer-copyright text-center py-3" style="background:#262626; color:#FFFFFF;">© 2020 Copyright: Team Demogorgons
+  </div>
+  </footer>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
