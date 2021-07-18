@@ -1,3 +1,4 @@
+require('dotenv').config();
 module.exports = MainFN;
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 function getJson(url){
@@ -17,7 +18,8 @@ function removeTags(str) {
     return str.replace( /(<([^>]+)>)/ig, '');
 }
 function MainFN(foodid){
-    var apiKey = "5e39bdba2f6b49af9e51c5daf5df177f";
+    var apiKey = process.env.KEY;
+    
     var url = "https://api.spoonacular.com/recipes/"+foodid.toString()+"/information?includeNutrition=true&apiKey=";
     url = url + apiKey;
     dishinfo = getJson(url);

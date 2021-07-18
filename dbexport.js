@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 module.exports = mainfn;
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 function makeurl(baseurl,params,apiKey){
@@ -10,7 +10,7 @@ function makeurl(baseurl,params,apiKey){
     return geturl
 }
 function getmenu(params) {
-    var apiKey = "5e39bdba2f6b49af9e51c5daf5df177f";
+    var apiKey = process.env.KEY;
     var baseurl = "https://api.spoonacular.com/recipes/findByNutrients?";
     var priority = [["minCalories","maxCalories"],["minCarbs","maxCarbs"],["minProtein","maxProtein"],["minFat","maxFat"]];
     var prioritylevel = 1;
