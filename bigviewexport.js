@@ -19,7 +19,6 @@ function removeTags(str) {
 }
 function MainFN(foodid){
     var apiKey = process.env.KEY;
-    
     var url = "https://api.spoonacular.com/recipes/"+foodid.toString()+"/information?includeNutrition=true&apiKey=";
     url = url + apiKey;
     dishinfo = getJson(url);
